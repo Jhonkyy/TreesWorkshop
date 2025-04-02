@@ -135,20 +135,3 @@ class BinarySearchTree[T]:
             return []
 
         return self.postorder(node.left) +  self.postorder(node.right) + [node.data]
-
-if __name__ == "__main__":
-    # Crear el árbol
-    bst = BinarySearchTree()
-
-    # Insertar valores
-    values = [10, 5, 15, 3, 7, 13, 17]
-    for v in values:
-        bst.insert(v)
-
-    # Mostrar el árbol
-    print(bst)
-
-    # Recorrido en postorden
-    print("Preorder:", bst.preorder(bst.root))
-    print("Inorder:", bst.inorder(bst.root))
-    print("Postorden:", bst.postorder(bst.root))
